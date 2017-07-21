@@ -1,0 +1,15 @@
+<html data-ng-app="testApp">
+<head>
+  <title>Starter AngularJS Application</title>
+</head>
+<body data-ng-controller="testController as vm">
+  <!-- Your stuff here -->
+  <h1>{{vm.post.title}}</h1>
+  <p>{{vm.post.body}}</p>
+  <button data-ng-click="vm.send(vm.post)">Submit</button>
+
+  <!-- Scripts -->
+  <script src="lib/angular.min.js"></script>
+  <script src="build/app.min.js"></script>
+</body>
+</html>

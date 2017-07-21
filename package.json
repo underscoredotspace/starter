@@ -1,0 +1,53 @@
+{
+  "name": "underscoredotspace-starter",
+  "version": "1.0.0",
+  "description": "Starter AngularJS App with Jest for testing and Grunt for build",
+  "readme": "README.md",
+  "homepage": "https://underscore.space",
+  "author": "Colin Tindle <ampersand@underscore.space> (https://underscore.space)",
+  "license": "CC-BY-4.0",
+  "bugs": {
+    "url": "https://github.com/underscoredotspace/starter/issues"
+  },
+  "scripts": {
+    "build": "grunt min",
+    "build:watch": "grunt",
+    "start": "node app/server",
+    "start:watch": "nodemon app/server",
+    "dev": "yarn build:watch & yarn start:watch",
+    "test": "jest",
+    "test:watch": "jest --watchAll --notify",
+    "test:ci": "jest -i --coverage && cat coverage/lcov.info | coveralls",
+    "cover:view": "open coverage/lcov-report/index.html"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "app/{client/src,server}/*.js"
+    ],
+    "roots": ["app/client/src", "app/server", "app/test"]
+  },
+  "dependencies": {
+    "angular": "^1.6.5",
+    "express": "^4.15.3"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.6.5",
+    "coveralls": "^2.13.1",
+    "grunt": "^1.0.1",
+    "grunt-contrib-uglify": "git://github.com/gruntjs/grunt-contrib-uglify.git#harmony",
+    "grunt-contrib-watch": "^1.0.0",
+    "jest": "^20.0.4",
+    "nodemon": "^1.11.0",
+    "supertest": "^3.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/underscoredotspace/starter"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "angularJS"
+  ]
+}

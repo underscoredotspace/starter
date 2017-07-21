@@ -1,0 +1,4 @@
+{
+  "verbose": false,
+  "ignore": ["gruntfile.js", "app/client/**/*", "*.md", "*.json", "app/test/client/**/*"]
+}
